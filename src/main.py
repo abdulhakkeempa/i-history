@@ -3,7 +3,7 @@ import dlib
 import numpy as np
 import getpass
 import datetime
-from db.models import DB
+from db.model import DB
 
 def calculate_EAR(eye):
     """
@@ -31,7 +31,7 @@ EAR_THRESHOLD = 0.2
 detector = dlib.get_frontal_face_detector()
 
 # Load the predictor
-predictor = dlib.shape_predictor("./model/shape_predictor_68_face_landmarks.dat")
+predictor = dlib.shape_predictor("model/shape_predictor_68_face_landmarks.dat")
 
 # read the image
 cap = cv2.VideoCapture(0)
